@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Animation</title>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #234;
+        }
+
+        h1 {
+            color: white;
+            font-family: monospace;
+            font-size: 50px;
+            overflow: hidden;
+            border-right: 3px solid white;
+            white-space: nowrap;
+            animation: 
+                type 6s steps(26) infinite,
+                blink .8s step-end infinite;
+        }
+
+        @keyframes type {
+            0% { width: 0; }
+            50% { width: 26ch }
+            100% { width: 0 }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Text with 26 characters -->
+    <h1>CSS Text Typing Animation.</h1>
+</body>
+</html>
